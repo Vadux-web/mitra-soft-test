@@ -1,9 +1,9 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import GalleryImagePart from "../GalleryImagePart/GalleryImagePart";
 import Styles from "./Styles";
 
-let Home = () => {
+let Home = (props) => {
   return (
     <div>
       <Styles>
