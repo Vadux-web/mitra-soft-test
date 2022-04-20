@@ -1,9 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import Navibar from "./Components/Navibar.jsx";
+import Navibar from "./components/Navibar/Navibar.jsx";
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
-import Home from "./Components/Home";
-import Details from "./Components/Details";
-import About from "./Components/About";
+import Home from "./components/Home/Home";
+import Details from "./components/Details/Details";
+import About from "./components/About/About";
 
 let App = () => {
   return (
