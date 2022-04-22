@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import GalleryImagePart from "../GalleryImagePart/GalleryImagePart";
 import Styles from "./Styles";
+import GalleryContainer from "./Gallery/GalleryContainer";
 
 let Home = (props) => {
   return (
@@ -9,7 +9,7 @@ let Home = (props) => {
       <Styles>
         <Container>
           <h1>Галерея</h1>
-          <GalleryImagePart />
+          <GalleryContainer />
         </Container>
       </Styles>
     </div>
