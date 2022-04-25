@@ -1,19 +1,17 @@
 import React from "react";
 import { connect } from "react-redux";
 import { setCardAC, toggleIsFetchingAC } from "../../../redux/gallery-reducer";
-import axios from "axios";
 import Gallery from "./Gallery";
 import Preloader from "../../common/Preloader/Preloader";
+import { getCards } from "../../../api/api";
 
 class GalleryContainer extends React.Component {
   componentDidMount() {
     this.props.toggleIsFetching(true);
-    axios
-      .get("https://jsonplaceholder.typicode.com/photos?_limit=24")
-      .then((response) => {
-        this.props.toggleIsFetching(false);
-        this.props.setCards(response.data);
-      });
+    getCards().then((data) => {
+      this.props.toggleIsFetching(false);
+      this.props.setCards(data);
+    });
   }
 
   render() {
@@ -32,17 +30,6 @@ let mapStateToProps = (state) => {
     isFetching: state.homePage.isFetching,
   };
 };
-
-// let mapDispatchToProps = (dispatch) => {
-//   return {
-//     setCards: (cards) => {
-//       dispatch(setCardAC(cards));
-//     },
-//     toggleIsFetching: (isFetching) => {
-//       dispatch(toggleIsFetchingAC(isFetching));
-//     },
-//   };
-// };
 
 export default connect(mapStateToProps, {
   setCards: setCardAC,

@@ -1,16 +1,14 @@
 import React from "react";
 import Details from "./Details";
-import axios from "axios";
 import { connect } from "react-redux";
 import { setDetailsAC } from "../../redux/details-reducer";
+import { getDetails } from "../../api/api";
 
 class DetailsContainer extends React.Component {
   componentDidMount() {
-    axios
-      .get("https://jsonplaceholder.typicode.com/photos/2")
-      .then((response) => {
-        this.props.setDetails(response.data);
-      });
+    getDetails().then((data) => {
+      this.props.setDetails(data);
+    });
   }
 
   render() {
