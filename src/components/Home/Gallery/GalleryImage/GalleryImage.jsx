@@ -11,10 +11,9 @@ let GalleryImage = (props) => {
           <Card className="bg-dark text-white">
             <Card.Img src={props.url} alt="Card image" />
             <Card.ImgOverlay>
-              <Card.Title>{props.title}</Card.Title>
-              <Button variant="primary">
-                <NavLink to={"/details/" + props.id}>Подробнее</NavLink>
-              </Button>
+              <NavLink to={"/details/" + props.id}>
+                <Button variant="primary">Подробнее</Button>
+              </NavLink>
             </Card.ImgOverlay>
           </Card>
         </Col>

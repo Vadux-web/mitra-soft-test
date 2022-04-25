@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import { setCardAC, toggleIsFetchingAC } from "../../../redux/gallery-reducer";
 import axios from "axios";
 import Gallery from "./Gallery";
-import { Spinner } from "react-bootstrap";
 import Preloader from "../../common/Preloader/Preloader";
 
 class GalleryContainer extends React.Component {
