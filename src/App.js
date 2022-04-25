@@ -5,7 +5,7 @@ import Home from "./components/Home/Home";
 import Details from "./components/Details/Details";
 import About from "./components/About/About";
 
-let App = (props) => {
+let App = () => {
   return (
     <div>
       <BrowserRouter>
