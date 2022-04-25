@@ -34,15 +34,18 @@ let mapStateToProps = (state) => {
   };
 };
 
-let mapDispatchToProps = (dispatch) => {
-  return {
-    setCards: (cards) => {
-      dispatch(setCardAC(cards));
-    },
-    toggleIsFetching: (isFetching) => {
-      dispatch(toggleIsFetchingAC(isFetching));
-    },
-  };
-};
+// let mapDispatchToProps = (dispatch) => {
+//   return {
+//     setCards: (cards) => {
+//       dispatch(setCardAC(cards));
+//     },
+//     toggleIsFetching: (isFetching) => {
+//       dispatch(toggleIsFetchingAC(isFetching));
+//     },
+//   };
+// };
 
-export default connect(mapStateToProps, mapDispatchToProps)(GalleryContainer);
+export default connect(mapStateToProps, {
+  setCards: setCardAC,
+  toggleIsFetching: toggleIsFetchingAC,
+})(GalleryContainer);
