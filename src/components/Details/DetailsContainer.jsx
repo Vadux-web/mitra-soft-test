@@ -1,20 +1,23 @@
-import React from "react";
 import Details from "./Details";
 import { connect } from "react-redux";
 import { setDetailsAC } from "../../redux/details-reducer";
-import { getDetails } from "../../api/api";
+import React, { useEffect } from "react";
+import axios from "axios";
+import { useLocation } from "react-router-dom";
 
-class DetailsContainer extends React.Component {
-  componentDidMount() {
-    getDetails().then((data) => {
-      this.props.setDetails(data);
-    });
-  }
+const DetailsContainer = (props) => {
+  const location = useLocation();
+  let id = location.pathname.split("/")[2];
 
-  render() {
-    return <Details {...this.props} details={this.props.details} />;
-  }
-}
+  useEffect(() => {
+    axios
+      .get(`https://jsonplaceholder.typicode.com/photos/` + id)
+      .then((data) => {
+        props.setDetails(data);
+      });
+  }, []);
+  return <Details {...props} details={props.details} />;
+};
 
 let mapStateToProps = (state) => ({ details: state.detailsPage.details });
 

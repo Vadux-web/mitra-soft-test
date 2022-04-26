@@ -10,8 +10,10 @@ export const getCards = () => {
   });
 };
 
-export const getDetails = () => {
-  return instance.get("/2").then((response) => {
-    return response.data;
-  });
-};
+// export const getDetails = (id) => {
+//   return instance.get("/2").then((response) => {
+//     return response.data;
+//   });
+// };
+
+// `${id}`
