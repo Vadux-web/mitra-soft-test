@@ -15,5 +15,3 @@ export const getDetails = (id) => {
     return response.data;
   });
 };
-
-// `${id}`

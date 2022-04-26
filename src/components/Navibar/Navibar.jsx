@@ -19,12 +19,8 @@ let Navibar = () => {
                 <a href="mailto:lunev82@gmail.com">lunev82@gmail.com</a>
               </div>
               <Nav className="me-auto">
-                <Nav.Link>
-                  <Link to="/">Галерея</Link>
-                </Nav.Link>
-                <Nav.Link>
-                  <Link to="/about">Обо мне</Link>
-                </Nav.Link>
+                <Nav.Link href="/">Галерея</Nav.Link>
+                <Nav.Link href="/about">Обо мне</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>
