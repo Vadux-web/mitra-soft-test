@@ -12,9 +12,9 @@ let DetailsCard = (props) => {
     <div>
       <Styles>
         <Card style={{ width: "100%" }}>
-          <Card.Img variant="top" src={props.details.data.url} />
+          <Card.Img variant="top" src={props.details.url} />
           <Card.Body>
-            <Card.Title>{props.details.data.title}</Card.Title>
+            <Card.Title>{props.details.title}</Card.Title>
             <Button variant="primary">
               <NavLink to={"/"}>Назад</NavLink>
             </Button>

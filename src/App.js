@@ -13,7 +13,7 @@ let App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/details/:id" element={<DetailsContainer />} />
+          <Route path="/details/*" element={<DetailsContainer />} />
         </Routes>
       </BrowserRouter>
     </div>
