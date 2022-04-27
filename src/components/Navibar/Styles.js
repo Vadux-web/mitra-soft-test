@@ -21,15 +21,20 @@ const Styles = styled.div`
     width: 100px;
     height: 100px;
     border-radius: 50px;
-    margin-bottom: 10px;
+    margin-right: 10px;
   }
 
   .info {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     color: #adb1b8;
     font-size: 14px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
+    align-items: flex-end;
+  }
+
+  .info_text {
+    margin-bottom: 0;
   }
 `;
 

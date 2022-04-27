@@ -1,17 +1,13 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import Styles from "./Styles";
 import GalleryContainer from "./Gallery/GalleryContainer";
 
-let Home = (props) => {
+let Home = () => {
   return (
     <div>
-      <Styles>
-        <Container>
-          <h1>Галерея</h1>
-          <GalleryContainer />
-        </Container>
-      </Styles>
+      <Container>
+        <GalleryContainer />
+      </Container>
     </div>
   );
 };

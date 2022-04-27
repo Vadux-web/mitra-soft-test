@@ -2,7 +2,6 @@ import Details from "./Details";
 import { connect } from "react-redux";
 import { setDetailsAC } from "../../redux/details-reducer";
 import React, { useEffect } from "react";
-import axios from "axios";
 import { useLocation } from "react-router-dom";
 import { getDetails } from "../../api/api";
 
@@ -23,3 +22,5 @@ let mapStateToProps = (state) => ({ details: state.detailsPage.details });
 export default connect(mapStateToProps, {
   setDetails: setDetailsAC,
 })(DetailsContainer);
+
+//TODO useMatchParams

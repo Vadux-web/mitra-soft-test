@@ -6,7 +6,6 @@ let Details = (props) => {
   return (
     <div>
       <Container>
-        <h1>Подробнее</h1>
         <DetailsCard details={props.details} />
       </Container>
     </div>
@@ -14,3 +13,5 @@ let Details = (props) => {
 };
 
 export default Details;
+
+//TODO поцентру

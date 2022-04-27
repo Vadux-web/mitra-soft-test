@@ -21,3 +21,6 @@ let App = () => {
 };
 
 export default App;
+
+//TODO File structure
+//TODO Bootstrap ThemeProvider

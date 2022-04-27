@@ -11,7 +11,7 @@ let DetailsCard = (props) => {
   return (
     <div>
       <Styles>
-        <Card style={{ width: "100%" }}>
+        <Card style={{ width: "75%" }}>
           <Card.Img variant="top" src={props.details.url} />
           <Card.Body>
             <Card.Title>{props.details.title}</Card.Title>
