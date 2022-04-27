@@ -5,6 +5,11 @@ const Styles = styled.div`
     text-decoration: none;
     color: white;
   }
+
+  .card {
+    margin: auto;
+    width: 75%;
+  }
 `;
 
 export default Styles;

@@ -1,11 +1,13 @@
 import React from "react";
-import { Spinner } from "react-bootstrap";
+import { StyledSpinner, StyledDiv } from "./Styles";
 
 let Preloader = () => {
   return (
-    <Spinner animation="border" role="status">
-      <span className="visually-hidden">Loading...</span>
-    </Spinner>
+    <StyledDiv>
+      <StyledSpinner animation="border" role="status">
+        <span className="visually-hidden">Loading...</span>
+      </StyledSpinner>
+    </StyledDiv>
   );
 };
 

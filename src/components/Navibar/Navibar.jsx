@@ -7,18 +7,22 @@ let Navibar = () => {
   return (
     <div>
       <Styles>
-        <Navbar collapseOnSelect expand="none" bg="dark" variant="dark">
+        <Navbar
+          fixed="top"
+          collapseOnSelect
+          expand="none"
+          bg="dark"
+          variant="dark"
+        >
           <Container>
-            <Navbar.Brand></Navbar.Brand>
+            <Navbar.Brand />
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <div className="info">
                 <img className="avatar" src={avatar} alt={"ava"} />
                 <div>
                   <p className="info_text">Лунёв Вадим</p>
-                  <p className="info_text" href="mailto:lunev82@gmail.com">
-                    lunev82@gmail.com
-                  </p>
+                  <p className="info_text">lunev82@gmail.com</p>
                 </div>
               </div>
               <Nav className="me-auto">

@@ -4,17 +4,20 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import DetailsContainer from "./components/Details/DetailsContainer";
+import { Container } from "react-bootstrap";
 
 let App = () => {
   return (
     <div>
       <BrowserRouter>
         <Navibar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/details/:id" element={<DetailsContainer />} />
-        </Routes>
+        <Container style={{ marginTop: "100px" }}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/details/:id" element={<DetailsContainer />} />
+          </Routes>
+        </Container>
       </BrowserRouter>
     </div>
   );
@@ -23,4 +26,3 @@ let App = () => {
 export default App;
 
 //TODO File structure
-//TODO Bootstrap ThemeProvider

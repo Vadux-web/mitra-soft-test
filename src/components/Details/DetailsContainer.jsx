@@ -2,7 +2,7 @@ import Details from "./Details";
 import { connect } from "react-redux";
 import { setDetailsAC } from "../../redux/details-reducer";
 import React, { useEffect } from "react";
-import { useLocation, useMatch, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { getDetails } from "../../api/api";
 
 const DetailsContainer = (props) => {
