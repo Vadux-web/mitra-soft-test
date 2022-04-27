@@ -21,5 +21,3 @@ let mapStateToProps = (state) => ({ details: state.detailsPage.details });
 export default connect(mapStateToProps, {
   setDetails: setDetailsAC,
 })(DetailsContainer);
-
-//TODO useMatchParams
