@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { setCardAC, toggleIsFetchingAC } from "../../../redux/gallery-reducer";
 import Preloader from "../../common/Preloader/Preloader";
@@ -21,31 +21,26 @@ const chunkArray = (myArray, chunk_size) => {
   return tempArray;
 };
 
-//TODO переписать на FC
-
-/**
- *
- */
-class GalleryContainer extends React.Component {
-  componentDidMount() {
-    this.props.toggleIsFetching(true);
+const GalleryContainer = (props) => {
+  useEffect(() => {
+    props.toggleIsFetching(true);
     getCards().then((data) => {
-      this.props.toggleIsFetching(false);
-      this.props.setCards(data);
+      props.toggleIsFetching(false);
+      props.setCards(data);
     });
-  }
-  render() {
-    const photosChunks = chunkArray(this.props.cards, 6);
-    return (
-      <>
-        {this.props.isFetching ? <Preloader /> : null}
-        {photosChunks.map((photosChunk, index) => (
-          <GalleryChunk key={index} partIndex={index} cards={photosChunk} />
-        ))}
-      </>
-    );
-  }
-}
+  }, []);
+
+  const photosChunks = chunkArray(props.cards, 6);
+
+  return (
+    <>
+      {props.isFetching ? <Preloader /> : null}
+      {photosChunks.map((photosChunk, index) => (
+        <GalleryChunk key={index} partIndex={index} cards={photosChunk} />
+      ))}
+    </>
+  );
+};
 
 const mapStateToProps = (state) => {
   return {
