@@ -1,4 +1,5 @@
-const SET_DETAILS = "SET-DETAILS";
+export const SET_DETAILS = "SET-DETAILS";
+export const REQUEST_DETAILS = "REQUEST-DETAILS";
 
 let initialState = {
   details: null,
@@ -15,5 +16,6 @@ const detailsReducer = (state = initialState, action) => {
 };
 
 export const setDetailsAC = (details) => ({ type: SET_DETAILS, details });
+// export const setDetailsAC = (details) => ({ type: REQUEST_DETAILS, details });
 
 export default detailsReducer;
