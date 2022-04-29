@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { Card, Button } from "react-bootstrap";
 
-const Styles = styled.div`
+export const StyledButton = styled(Button)`
   .btn {
     position: absolute;
     top: 80%;
@@ -10,7 +11,9 @@ const Styles = styled.div`
     opacity: 0;
     visibility: hidden;
   }
+`;
 
+export const StyledCard = styled(Card)`
   .card:hover .btn {
     opacity: 1;
     visibility: visible;
@@ -21,5 +24,3 @@ const Styles = styled.div`
     color: white;
   }
 `;
-
-export default Styles;

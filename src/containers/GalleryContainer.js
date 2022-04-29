@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { setCardAC, toggleIsFetchingAC } from "../../../redux/gallery-reducer";
-import Preloader from "../../common/Preloader/Preloader";
-import { getCards } from "../../../api/api";
-import GalleryChunk from "./GalleryChunk";
+import { setCardAC, toggleIsFetchingAC } from "../redux/gallery-reducer";
+import Preloader from "../common/Preloader/Preloader";
+import { getCards } from "../api/api";
+import GalleryChunk from "../screens/Gallery/GalleryChunk/GalleryChunk";
 
 /**
  * Функция разбивает на чанки;

@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Card } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import Styles from "./Styles";
-import Preloader from "../../common/Preloader/Preloader";
+import Preloader from "../../../common/Preloader/Preloader";
 
 let DetailsCard = (props) => {
   if (!props.details) {

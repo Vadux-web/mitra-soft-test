@@ -1,9 +1,9 @@
-import Details from "./Details";
+import Details from "../screens/Details/Details";
 import { connect } from "react-redux";
-import { setDetailsAC } from "../../redux/details-reducer";
+import { setDetailsAC } from "../redux/details-reducer";
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getDetails } from "../../api/api";
+import { getDetails } from "../api/api";
 
 const DetailsContainer = (props) => {
   const params = useParams();

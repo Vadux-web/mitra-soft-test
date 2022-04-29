@@ -1,23 +1,23 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import Navibar from "./components/Navibar/Navibar.jsx";
+import Navibar from "./common/Navibar/Navibar.jsx";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-import Home from "./components/Home/Home";
-import About from "./components/About/About";
-import DetailsContainer from "./components/Details/DetailsContainer";
-import { Container } from "react-bootstrap";
+import Gallery from "./screens/Gallery/Gallery";
+import About from "./screens/About/About";
+import DetailsContainer from "./containers/DetailsContainer";
+import { StyledContainer } from "./Styles";
 
-let App = () => {
+const App = () => {
   return (
     <div>
       <BrowserRouter>
         <Navibar />
-        <Container style={{ marginTop: "100px" }}>
+        <StyledContainer>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Gallery />} />
             <Route path="/about" element={<About />} />
             <Route path="/details/:id" element={<DetailsContainer />} />
           </Routes>
-        </Container>
+        </StyledContainer>
       </BrowserRouter>
     </div>
   );
@@ -26,3 +26,4 @@ let App = () => {
 export default App;
 
 //TODO File structure
+//TODO marginTop: "100px"
