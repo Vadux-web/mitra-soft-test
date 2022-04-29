@@ -24,6 +24,3 @@ const App = () => {
 };
 
 export default App;
-
-//TODO File structure
-//TODO marginTop: "100px"
