@@ -1,12 +1,15 @@
-import React, { useEffect } from "react";
-import { connect } from "react-redux";
-import { setCardAC, toggleIsFetchingAC } from "../redux/gallery-reducer";
+import React from "react";
+import { connect, useDispatch } from "react-redux";
+import {
+  REQUEST_CARDS,
+  setCardsAC,
+  toggleIsFetchingAC,
+} from "../redux/gallery-reducer";
 import Preloader from "../common/Preloader/Preloader";
-import { getCards } from "../api/api";
 import GalleryChunk from "../screens/Gallery/GalleryChunk/GalleryChunk";
 
 /**
- * Функция разбивает на чанки;
+ * Функция разбивает входной массив на чанки;
  * @param myArray - входной массив
  * @param chunk_size - размер чанка
  * @returns {*[]} - массив из чанков
@@ -22,13 +25,8 @@ const chunkArray = (myArray, chunk_size) => {
 };
 
 const GalleryContainer = (props) => {
-  useEffect(() => {
-    props.toggleIsFetching(true);
-    getCards().then((data) => {
-      props.toggleIsFetching(false);
-      props.setCards(data);
-    });
-  }, []);
+  const dispatch = useDispatch();
+  dispatch({ type: REQUEST_CARDS });
 
   const photosChunks = chunkArray(props.cards, 6);
 
@@ -50,8 +48,8 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps, {
-  setCards: setCardAC,
-  toggleIsFetching: toggleIsFetchingAC,
+  setCardsAC,
+  toggleIsFetchingAC,
 })(GalleryContainer);
 
 //TODO saga effects

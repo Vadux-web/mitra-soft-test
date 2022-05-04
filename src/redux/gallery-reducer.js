@@ -1,5 +1,6 @@
-let SET_CARDS = "SET-CARDS";
-let TOGGLE_IS_FETCHING = "TOGGLE-IS-FETCHING";
+export const SET_CARDS = "SET-CARDS";
+export const TOGGLE_IS_FETCHING = "TOGGLE-IS-FETCHING";
+export const REQUEST_CARDS = "REQUEST-CARDS";
 
 let initialState = {
   cards: [],
@@ -25,7 +26,8 @@ const galleryReducer = (state = initialState, action) => {
   }
 };
 
-export const setCardAC = (cards) => ({ type: SET_CARDS, cards });
+export const setCardsAC = (cards) => ({ type: SET_CARDS, cards });
+
 export const toggleIsFetchingAC = (isFetching) => ({
   type: TOGGLE_IS_FETCHING,
   isFetching,

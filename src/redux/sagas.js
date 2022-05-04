@@ -1,12 +1,19 @@
-import { takeEvery, call, put } from "redux-saga/effects";
-import { REQUEST_DETAILS, SET_DETAILS } from "./details-reducer";
-import { getDetails } from "../api/api";
+import { take, put } from "redux-saga/effects";
+import {
+  REQUEST_CARDS,
+  SET_CARDS,
+  toggleIsFetchingAC,
+} from "./gallery-reducer";
+import { getCards } from "../api/api";
 
-export function* sagaWatcher() {
-  yield takeEvery(REQUEST_DETAILS, sagaWorker);
+export function* sagaWorker() {
+  yield put(toggleIsFetchingAC(true));
+  const data = yield getCards();
+  yield put({ type: SET_CARDS, cards: data });
+  yield put(toggleIsFetchingAC(false));
 }
 
-function* sagaWorker() {
-  const payload = yield call(getDetails);
-  yield put({ type: SET_DETAILS, payload });
+export function* sagaWatcher() {
+  yield take(REQUEST_CARDS);
+  yield sagaWorker();
 }
