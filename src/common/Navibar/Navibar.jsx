@@ -1,7 +1,7 @@
 import React from "react";
 import { StyledImg } from "./Styles";
 import { Container, Nav, Navbar, Offcanvas } from "react-bootstrap";
-import avatar from "../../assets/images/624301325.png";
+import avatar from "../../assets/images/me.jpg";
 
 let Navibar = () => {
   return (
