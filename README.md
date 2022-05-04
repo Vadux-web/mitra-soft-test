@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Отборочное задание для MitraSoft
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Необходимо реализовать SPA (single page application) на React.
 
-## Available Scripts
+## Ключевые технологии, которые необходимо использовать
+
 
 In the project directory, you can run:
+1. `React`
+2. `React-bootstrap`
+3. `React-router`
+4. `Axios`
+5. `Redux`
+6. `Redux-saga`
+7. `Git`
 
-### `yarn start`
+### Описание задачи
+Нужно создать сайт-галерею, где будут присутствовать 3 страницы (роута):
+1. «Галерея» (главная страница), где будут располагаться картинки.
+2. «Обо мне», где будет располагаться краткая информация о Вас.
+3. Подробности о картинке (куда необходимо вывести поля краткую информацию о картинке – заголовок, id, ссылка)
+   Получить данные о картинках необходимо через фейковое api https://jsonplaceholder.typicode.com, ресурс - /photos (или
+   аналогичные api на Ваше усмотрение).
+### Подробное описание
+#### 1. «Галерея» (главная страница)
+   1.1. Должна содержать 4 категории, где в каждой категории будут присутствовать 6 картинок (итого нужно подгрузить с
+   сервера только 24 первых картинки и разбить их по 4м категориям).
+   1.2. При наведении мышью на картинку, поверх неё должна появляться кнопка «Подробнее» и совершаться переход на
+   отдельную страницу о подробностях картинки (описание см. ниже).
+   1.3. При загрузке данных с сервера нужно отобразить сперва лоадер, а только потом подгруженный контент (создайте
+   дополнительно искусственную задержку в 0.5 секунд чтобы лоадер повисел подольше).
+   1.4. Должен присутствовать хэдер с «меню-бургером». При нажатии на него слева должно всплывать навигационное
+   меню, где будет присутствовать 2 ссылки («Галерея» и «Обо мне»), а также отображаться ваш аватар, имя и почтовый
+   адрес.
+#### 2. «Обо мне»
+   2.1. Здесь всё просто, расскажите немного о себе. Сделайте эту страницу отдельным роутом, сохранив при этом хэдер и
+   «меню-бургер».
+#### 3. «Подробности о картинке» (переход при нажатии по кнопке «Подробнее» на картинке)
+   3.1. Необходимо создать карточку, куда вывести краткую информацию о картинке и саму картинку.
+   3.2. Добавить лоадер по аналогии с п.1.3.
+   3.2. Сделать кнопку «Назад», при нажатии на которую произойдёт переход на главную страницу.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+###  P.S:
+1. В качестве основы можно взять шаблон React App.
+2. Вынесите логику работы с сервером в saga-эффекты.
+3. Обязательно разбейте логически-независимые элементы страниц на компоненты.
+4. На странице «Подробности о картинке» данные должны подгружаться даже после обновления этой страницы.
+5. Весь интерфейс реализуйте с помощью ui-библиотеки React-bootstrap (используйте компоненты, которые
+   предоставляет эта библиотека).
+6. Во время написания кода делайте коммиты почаще (по каждой существенной функции интерфейса).
