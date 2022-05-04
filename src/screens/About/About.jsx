@@ -1,6 +1,5 @@
 import React from "react";
 import { Accordion, Container } from "react-bootstrap";
-import Styles from "./Styles";
 
 let About = () => {
   return (
