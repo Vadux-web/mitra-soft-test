@@ -9,9 +9,7 @@ const GalleryImage = (props) => {
         <StyledCard className="bg-dark text-white">
           <Card.Img src={props.thumbnailUrl} alt="Card image" />
           <Card.ImgOverlay>
-            <StyledButton variant="primary" href={"/details/" + props.id}>
-              Подробнее
-            </StyledButton>
+            <StyledButton href={"/details/" + props.id}>Подробнее</StyledButton>
           </Card.ImgOverlay>
         </StyledCard>
       </Col>
