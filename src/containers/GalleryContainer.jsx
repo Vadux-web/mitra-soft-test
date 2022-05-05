@@ -24,6 +24,10 @@ const chunkArray = (myArray, chunk_size) => {
   return tempArray;
 };
 
+/**
+ * @param props – массив из limit элементов с сервера
+ * @returns {JSX.Element} – нумерованные разделы с количеством элементов кратных chunk_size
+ */
 const GalleryContainer = (props) => {
   const dispatch = useDispatch();
   dispatch({ type: REQUEST_CARDS });

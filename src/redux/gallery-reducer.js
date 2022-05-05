@@ -2,7 +2,7 @@ export const SET_CARDS = "SET-CARDS";
 export const TOGGLE_IS_FETCHING = "TOGGLE-IS-FETCHING";
 export const REQUEST_CARDS = "REQUEST-CARDS";
 
-let initialState = {
+const initialState = {
   cards: [],
   isFetching: false,
 };

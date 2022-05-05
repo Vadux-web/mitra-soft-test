@@ -1,6 +1,6 @@
 export const SET_DETAILS = "SET-DETAILS";
 
-let initialState = {
+const initialState = {
   details: null,
 };
 

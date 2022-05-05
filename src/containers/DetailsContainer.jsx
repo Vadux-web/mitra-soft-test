@@ -5,6 +5,9 @@ import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getDetails } from "../api/api";
 
+/**
+ * @param props - данные о карточке
+ */
 const DetailsContainer = (props) => {
   const params = useParams();
 
@@ -16,7 +19,7 @@ const DetailsContainer = (props) => {
   return <Details {...props} details={props.details} />;
 };
 
-let mapStateToProps = (state) => ({ details: state.detailsPage.details });
+const mapStateToProps = (state) => ({ details: state.detailsPage.details });
 
 export default connect(mapStateToProps, {
   setDetails: setDetailsAC,

@@ -1,26 +1,27 @@
 import React from "react";
-import { Button, Card } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
-import Styles from "./Styles";
+import { Card, ListGroup } from "react-bootstrap";
+import { StyledButton, StyledCard } from "./Styles";
 import Preloader from "../../../common/Preloader/Preloader";
 
-let DetailsCard = (props) => {
+const DetailsCard = (props) => {
   if (!props.details) {
     return <Preloader />;
   }
   return (
     <div>
-      <Styles>
-        <Card>
-          <Card.Img variant="top" src={props.details.url} />
-          <Card.Body>
-            <Card.Title>{props.details.title}</Card.Title>
-            <Button variant="primary">
-              <NavLink to={"/"}>Назад</NavLink>
-            </Button>
-          </Card.Body>
-        </Card>
-      </Styles>
+      <StyledCard>
+        <Card.Img variant="top" src={props.details.url} />
+        <Card.Header>Card ID: #{props.details.id}</Card.Header>
+        <ListGroup variant="flush">
+          <ListGroup.Item>{props.details.title}</ListGroup.Item>
+          <ListGroup.Item>URL: {props.details.url}</ListGroup.Item>
+        </ListGroup>
+
+        <NavLink to={"/"}>
+          <StyledButton>Назад </StyledButton>
+        </NavLink>
+      </StyledCard>
     </div>
   );
 };

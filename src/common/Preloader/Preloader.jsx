@@ -1,7 +1,7 @@
 import React from "react";
 import { StyledSpinner, StyledDiv } from "./Styles";
 
-let Preloader = () => {
+const Preloader = () => {
   return (
     <StyledDiv>
       <StyledSpinner animation="border" role="status">

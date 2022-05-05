@@ -4,7 +4,7 @@ import GalleryImage from "./GalleryImage/GalleryImage";
 import { StyledDiv } from "./Styles";
 
 /**
- * Компонента раздела из 6 карточек
+ * Компонент раздела, массив из chunk_size элементов
  * @param props - принимает чанк-массив и partIndex для нумерации разделов
  * @returns {JSX.Element}
  * @constructor

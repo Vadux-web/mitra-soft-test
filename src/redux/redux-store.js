@@ -5,14 +5,14 @@ import createSagaMiddleware from "redux-saga";
 import { sagaWatcher } from "./sagas";
 import thunk from "redux-thunk";
 
-let reducers = combineReducers({
+const reducers = combineReducers({
   homePage: galleryReducer,
   detailsPage: detailsReducer,
 });
 
 const saga = createSagaMiddleware();
 
-let store = createStore(
+const store = createStore(
   reducers,
   compose(
     applyMiddleware(thunk, saga),

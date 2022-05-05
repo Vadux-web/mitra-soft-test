@@ -1,15 +1,14 @@
 import styled from "styled-components";
+import { Card, Button } from "react-bootstrap";
 
-const Styles = styled.div`
-  .btn a {
-    text-decoration: none;
-    color: white;
-  }
-
-  .card {
-    margin: auto;
-    width: 75%;
-  }
+export const StyledCard = styled(Card)`
+  display: flex;
+  margin: 20px auto;
+  width: 75%;
 `;
 
-export default Styles;
+export const StyledButton = styled(Button)`
+  text-decoration: none;
+  color: white;
+  margin: 20px;
+`;

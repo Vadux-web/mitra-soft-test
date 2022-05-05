@@ -3,12 +3,12 @@ import { StyledImg } from "./Styles";
 import { Container, Nav, Navbar, Offcanvas } from "react-bootstrap";
 import avatar from "../../assets/images/me.jpg";
 
-let Navibar = () => {
+const Navibar = () => {
   return (
     <div>
       <Navbar fixed="top" bg="dark" variant="dark" expand={false}>
         <Container>
-          <Navbar.Brand href="#">MitraSoft (test)</Navbar.Brand>
+          <Navbar.Brand href="/">MitraSoft (test)</Navbar.Brand>
           <Navbar.Toggle aria-controls="offcanvasNavbar" />
           <Navbar.Offcanvas
             id="offcanvasNavbar"

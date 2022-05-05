@@ -8,7 +8,7 @@ import { getCards } from "../api/api";
 
 export function* sagaWorker() {
   yield put(toggleIsFetchingAC(true));
-  const data = yield getCards();
+  const data = yield getCards(24);
   yield put({ type: SET_CARDS, cards: data });
   yield put(toggleIsFetchingAC(false));
 }

@@ -1,11 +1,11 @@
 import React from "react";
 import { Accordion, Container } from "react-bootstrap";
 
-let About = () => {
+const About = () => {
   return (
     <div>
       <Container>
-        <h1>Обо мне</h1>
+        <h2>Обо мне</h2>
         <h4>Лунёв Вадим Васильевич (39 лет)</h4>
         <p>
           Тел.: +7 (926) 453-13-94{" "}
