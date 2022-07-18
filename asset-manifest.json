@@ -1,16 +1,14 @@
 {
   "files": {
-    "main.css": "/mitra-soft-test/static/css/main.38be36b0.css",
-    "main.js": "/mitra-soft-test/static/js/main.adfbae6a.js",
-    "static/js/787.5e6f0529.chunk.js": "/mitra-soft-test/static/js/787.5e6f0529.chunk.js",
-    "static/media/624301325.png": "/mitra-soft-test/static/media/624301325.b040d4d5df9ec4dfb08c.png",
-    "index.html": "/mitra-soft-test/index.html",
-    "main.38be36b0.css.map": "/mitra-soft-test/static/css/main.38be36b0.css.map",
-    "main.adfbae6a.js.map": "/mitra-soft-test/static/js/main.adfbae6a.js.map",
-    "787.5e6f0529.chunk.js.map": "/mitra-soft-test/static/js/787.5e6f0529.chunk.js.map"
+    "main.css": "/static/css/main.e7720ab7.css",
+    "main.js": "/static/js/main.dece746b.js",
+    "static/media/me.jpg": "/static/media/me.62f15400476bb89343f1.jpg",
+    "index.html": "/index.html",
+    "main.e7720ab7.css.map": "/static/css/main.e7720ab7.css.map",
+    "main.dece746b.js.map": "/static/js/main.dece746b.js.map"
   },
   "entrypoints": [
-    "static/css/main.38be36b0.css",
-    "static/js/main.adfbae6a.js"
+    "static/css/main.e7720ab7.css",
+    "static/js/main.dece746b.js"
   ]
 }
